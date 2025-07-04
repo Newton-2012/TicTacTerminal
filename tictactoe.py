@@ -105,6 +105,12 @@ def get_ai_move(board):
                     move = (r, c)
     return move
 
+def replay():
+    replay = input("Do you want to play again? (Y/N): ").strip().lower()
+    if replay != 'y':
+        fake_loading("Closing Application", dots=12, delay=0.05, done_text="")
+
+
 def commands():
     board = [[None]*3 for _ in range(3)]
     current_player = 'X'  # Human always starts
@@ -141,7 +147,12 @@ def main():
     line_break(45)
     print(BLUE + "Tic Tac Terminal - Version 1.0.0" + RESET)
     line_break(45)
-    commands()
 
+    while True:
+        commands()
+        replay_choice = input("Do you want to play again? (Y/N): ").strip().lower()
+        if replay_choice != 'y':
+            fake_loading("Closing Application", dots=12, delay=0.05, done_text="")
+            break
 if __name__ == "__main__":
     main()
