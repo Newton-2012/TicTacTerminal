@@ -139,7 +139,7 @@ def main():
     print("Copyright (c) 2025 Newton2012 - MIT License")
     fake_loading("Starting Program")
     line_break(45)
-    print(BLUE + "Tic Tac Toe - Version 1.0.0" + RESET)
+    print(BLUE + "Tic Tac Terminal - Version 1.0.0" + RESET)
     line_break(45)
     commands()
 
