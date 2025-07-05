@@ -24,7 +24,7 @@ def print_board(board):
     for i, row in enumerate(board):
         print(" | ".join(f"{YELLOW if cell=='X' else RED if cell=='O' else RESET}{cell or ' '}{RESET}" for cell in row))
         if i < 2:
-            print(BLUE + "---+---+---" + RESET)
+            print("---+---+---")
     line_break(45)
 
 def check_winner(board, player):
